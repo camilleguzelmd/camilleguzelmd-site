@@ -1,0 +1,1198 @@
+/* Camille Guzel MD — site v0
+   Atkinson Hyperlegible. Two AAA pairs only:
+   ink #1C1418 on white; white on plum #25141C.
+   Premium spacing. AAA pairs only. No grey type. No pale-on-cream. */
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #1c1418;
+  --plum: #25141c;
+  --white: #ffffff;
+  --font: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --measure: 38rem;
+  --page: 68rem;
+  --gap: 1.5rem;
+  --tap: 48px;
+  --focus: 3px;
+  --rule: 1px;
+  --radius: 0.2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+  letter-spacing: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+strong {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus) solid currentColor;
+  outline-offset: 4px;
+}
+
+.skip {
+  position: absolute;
+  left: var(--gap);
+  top: var(--gap);
+  z-index: 1000;
+  background: var(--plum);
+  color: var(--white);
+  padding: 0.65rem 1rem;
+  min-height: var(--tap);
+  min-width: var(--tap);
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  transform: translateY(-200%);
+}
+
+.skip:focus,
+.skip:focus-visible {
+  transform: none;
+  outline: var(--focus) solid var(--white);
+  outline-offset: 4px;
+}
+
+.wrap {
+  width: min(var(--page), 100%);
+  margin-inline: auto;
+  padding-inline: var(--gap);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--white);
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+  min-height: 4rem;
+  padding-block: 0.45rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  min-height: var(--tap);
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--tap);
+  min-height: var(--tap);
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--plum);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.hero {
+  background: var(--plum);
+  color: var(--white);
+  padding-block: 3.25rem 3.75rem;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    padding-block: 4.5rem 5rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.name {
+  font-size: clamp(2.6rem, 8.5vw, 4.5rem);
+  line-height: 1.08;
+  margin: 0;
+  font-weight: 700;
+  max-width: 14ch;
+  letter-spacing: -0.02em;
+}
+
+.name::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--white);
+  margin-top: 0.85rem;
+}
+
+.motto {
+  margin-top: 1.25rem;
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.25;
+  font-weight: 700;
+  font-style: italic;
+  max-width: 18ch;
+  opacity: 0.95;
+}
+
+.role {
+  margin-top: 0.85rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.35;
+  max-width: 28ch;
+}
+
+.intro {
+  margin-top: 1.5rem;
+  max-width: 28rem;
+}
+
+.specs {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0;
+  font-weight: 700;
+}
+
+.specs li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.specs li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.65rem;
+  font-weight: 400;
+}
+
+.meta {
+  margin-top: 1.5rem;
+  max-width: 28rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding: 0.7rem 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.cta-solid {
+  background: var(--white);
+  color: var(--plum);
+}
+
+.cta-solid:focus-visible {
+  outline-color: var(--white);
+}
+
+.cta-ghost {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.hero-portrait {
+  display: block;
+  width: min(100%, 16rem);
+  max-width: 16rem;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 0.25rem;
+  justify-self: start;
+  margin-top: 0.25rem;
+  /* never stretch */
+  flex-shrink: 0;
+}
+
+@media (min-width: 800px) {
+  .hero-portrait {
+    width: 18rem;
+    max-width: 18rem;
+    height: auto;
+    margin-top: 0.35rem;
+    justify-self: end;
+  }
+}
+
+.section {
+  position: relative;
+  padding-block: 3.5rem;
+}
+
+@media (min-width: 800px) {
+  .section {
+    padding-block: 4.5rem;
+  }
+}
+
+.section h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+  margin-bottom: 1.75rem;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: currentColor;
+  margin-top: 0.75rem;
+}
+
+.care-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 800px) {
+  .care-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.35rem;
+  }
+}
+
+.card {
+  border: 2px solid var(--ink);
+  padding: 1.35rem 1.25rem 1.5rem;
+  min-height: 100%;
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.also {
+  margin-top: 1.75rem;
+  max-width: var(--measure);
+}
+
+.also h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.band {
+  background: var(--plum);
+  color: var(--white);
+  padding-block: 2.75rem;
+}
+
+.band p {
+  font-size: clamp(1.5rem, 3.5vw, 2.15rem);
+  line-height: 1.3;
+  font-weight: 700;
+  max-width: 22ch;
+}
+
+.band p::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--white);
+  margin-top: 1rem;
+}
+
+.about-grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+@media (min-width: 800px) {
+  .about-grid {
+    grid-template-columns: auto 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+}
+
+.portrait {
+  display: block;
+  width: 8.5rem;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 0.35rem;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--plum);
+}
+
+@media (min-width: 800px) {
+  .portrait {
+    width: 10.5rem;
+    height: auto;
+
+  }
+}
+
+.about-copy {
+  max-width: var(--measure);
+  display: grid;
+  gap: 1rem;
+}
+
+/* Goniometer: WHITE sections only, 14% ink, 90° CCW, not under type. */
+.has-mark {
+  overflow: hidden;
+}
+
+.has-mark::before {
+  content: "";
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .has-mark::before {
+    display: block;
+    position: absolute;
+    right: 0.5rem;
+    top: 18%;
+    width: 10.5rem;
+    height: 18.25rem;
+    background: url("goniometer.svg") no-repeat center / contain;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .has-mark > .wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  #updates.has-mark > .wrap {
+    max-width: 52rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 12rem;
+    width: min(var(--page), 100%);
+  }
+}
+
+.lede-block {
+  max-width: var(--measure);
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.privacy {
+  font-size: 1.05rem;
+}
+
+form {
+  max-width: 36rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+  margin: 0 0 0.45rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.hint {
+  display: block;
+  margin: 0 0 0.55rem;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.choices {
+  display: flex;
+  flex-direction: column;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: var(--tap);
+  padding: 0.3rem 0.15rem;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.choice input {
+  width: 1.35rem;
+  height: 1.35rem;
+  min-width: 1.35rem;
+  accent-color: var(--ink);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.fields {
+  display: grid;
+  gap: 1.1rem;
+  margin: 0 0 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .fields.two {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.field input,
+.field textarea {
+  display: block;
+  margin-top: 0.35rem;
+}
+
+.field .opt,
+.req {
+  font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0.6rem 0.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  appearance: none;
+}
+
+textarea {
+  min-height: 6.5rem;
+  resize: vertical;
+}
+
+.role-panel {
+  display: none;
+}
+
+form:has(#role-patient:checked) #patient-fields,
+form:has(#role-physician:checked) #referrer-fields,
+form:has(#role-pt:checked) #referrer-fields,
+form:has(#role-other:checked) #other-fields {
+  display: block;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+button[type="submit"] {
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding: 0.7rem 1.35rem;
+  border: 2px solid var(--ink);
+  background: var(--plum);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: var(--ink);
+}
+
+button[type="submit"]:focus-visible {
+  outline-color: var(--ink);
+}
+
+#form-status {
+  margin: 0;
+  font-weight: 700;
+  min-height: 1.5em;
+}
+
+.contact {
+  background: var(--plum);
+  color: var(--white);
+}
+
+.contact h2::after {
+  background: var(--white);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 36rem;
+}
+
+.contact-list a,
+.contact-list .web {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  min-width: var(--tap);
+  padding-block: 0.35rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.place {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  max-width: var(--measure);
+}
+
+.site-footer {
+  background: var(--plum);
+  color: var(--white);
+  padding-block: 1.5rem 1.75rem;
+  font-size: 1rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-footer p {
+  max-width: 36rem;
+}
+
+@media (max-width: 479px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .skip {
+    transition: none;
+  }
+}
+
+.conditions {
+  margin-top: 2.5rem;
+  max-width: var(--measure);
+}
+
+.conditions .hint {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.05rem;
+}
+
+.condition-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+  columns: 1;
+  gap: 1.5rem;
+}
+
+.condition-list li {
+  margin: 0.35rem 0;
+  break-inside: avoid;
+}
+
+@media (min-width: 700px) {
+  .condition-list {
+    columns: 2;
+  }
+}
+
+/* Compact interest block — high on page, Letsinger-scale */
+.section.interest.compact {
+  padding-block: 2rem 2.25rem;
+  background: var(--white);
+  border-block: 2px solid var(--ink);
+}
+
+.section.interest.compact h2 {
+  font-size: clamp(1.5rem, 3.5vw, 1.85rem);
+  margin-bottom: 0.65rem;
+}
+
+.interest-wrap {
+  max-width: 40rem;
+}
+
+.interest-lede {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.interest-note {
+  margin: 0 0 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.interest-form .interest-row {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .interest-form .interest-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.interest-form select {
+  font: inherit;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 0.5rem 0.65rem;
+  border: 2px solid var(--ink);
+  border-radius: 0.25rem;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.interest-form select:focus-visible,
+.interest-form input:focus-visible {
+  outline: var(--focus) solid currentColor;
+  outline-offset: 4px;
+}
+
+.interest-want {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  border: 0;
+}
+
+.interest-want legend {
+  padding: 0;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.choices.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.interest-actions {
+  margin-top: 0.25rem;
+}
+
+.interest-actions button {
+  min-height: var(--tap);
+}
+
+/* ——— Premium polish (still AAA ink/plum/white) ——— */
+.wrap {
+  width: min(100% - 2.5rem, var(--page));
+  margin-inline: auto;
+}
+
+@media (min-width: 800px) {
+  .wrap {
+    width: min(100% - 4rem, var(--page));
+  }
+}
+
+.site-header {
+  padding-block: 1rem;
+  border-bottom: var(--rule) solid var(--ink);
+}
+
+.site-header .wrap {
+  gap: 1.5rem;
+}
+
+.brand {
+  gap: 0.85rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.mark {
+  border-radius: var(--radius);
+}
+
+.nav ul {
+  gap: 0.35rem 1.5rem;
+}
+
+.nav a {
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.45rem 0;
+  border-bottom: var(--rule) solid transparent;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  border-bottom-color: currentColor;
+  text-decoration: none;
+}
+
+.hero {
+  padding-block: 3.75rem 4rem;
+}
+
+@media (min-width: 800px) {
+  .hero {
+    padding-block: 5.5rem 5.75rem;
+  }
+
+  .hero-grid {
+    gap: 4rem;
+    align-items: center;
+  }
+}
+
+.name {
+  font-size: clamp(2.75rem, 7vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  max-width: 12ch;
+}
+
+.name::after {
+  width: 3rem;
+  height: 1px;
+  margin-top: 1.15rem;
+  background: var(--ink);
+}
+
+.motto {
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-style: italic;
+  font-weight: 400;
+  margin: 1.25rem 0 1rem;
+  letter-spacing: 0.01em;
+}
+
+.role {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.intro {
+  max-width: 34rem;
+  margin-bottom: 1.5rem;
+}
+
+.specs {
+  gap: 0.5rem 1.75rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.05rem;
+}
+
+.meta {
+  max-width: 34rem;
+  margin-bottom: 1.75rem;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  gap: 0.75rem;
+}
+
+.cta {
+  border-radius: var(--radius);
+  padding: 0.85rem 1.35rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.cta-solid {
+  border: var(--rule) solid var(--plum);
+}
+
+.cta-ghost {
+  border: var(--rule) solid var(--ink);
+  background: transparent;
+}
+
+.cta-ghost:hover,
+.cta-ghost:focus-visible {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.hero-portrait {
+  width: min(100%, 17rem);
+  max-width: 17rem;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(28, 20, 24, 0.12);
+}
+
+@media (min-width: 800px) {
+  .hero-portrait {
+    width: 20rem;
+    max-width: 20rem;
+  }
+}
+
+.section {
+  padding-block: 4rem;
+}
+
+@media (min-width: 800px) {
+  .section {
+    padding-block: 5.25rem;
+  }
+}
+
+.section h2 {
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 1px;
+  background: currentColor;
+  margin-top: 0.85rem;
+}
+
+.care-grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.75rem 1.5rem;
+  border: var(--rule) solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.also,
+.conditions {
+  margin-top: 3rem;
+}
+
+.band {
+  padding-block: 2.75rem;
+}
+
+.band p {
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.35;
+  max-width: 28rem;
+  letter-spacing: -0.01em;
+}
+
+.portrait {
+  border-radius: var(--radius);
+  box-shadow: 0 8px 28px rgba(28, 20, 24, 0.1);
+}
+
+.about-copy {
+  gap: 1.15rem;
+}
+
+.about-copy p {
+  max-width: 36rem;
+}
+
+/* Compact interest — quieter frame, more air */
+.section.interest.compact {
+  padding-block: 2.75rem 3rem;
+  border-block: var(--rule) solid var(--ink);
+  background: var(--white);
+}
+
+.section.interest.compact h2 {
+  font-size: clamp(1.45rem, 3vw, 1.75rem);
+  margin-bottom: 0.85rem;
+}
+
+.interest-wrap {
+  max-width: 38rem;
+}
+
+.interest-lede {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.interest-note {
+  font-size: 0.98rem;
+  opacity: 1;
+  margin-bottom: 1.35rem;
+}
+
+.interest-form .field input,
+.interest-form select {
+  border: var(--rule) solid var(--ink);
+  border-radius: var(--radius);
+  padding: 0.7rem 0.85rem;
+  min-height: var(--tap);
+}
+
+.interest-form .field {
+  font-size: 0.98rem;
+}
+
+.interest-actions button {
+  border-radius: var(--radius);
+  padding: 0.85rem 1.5rem;
+  border: var(--rule) solid var(--plum);
+  letter-spacing: 0.01em;
+}
+
+.contact-list {
+  gap: 0.85rem;
+  font-size: 1.2rem;
+}
+
+.site-footer {
+  padding-block: 2rem;
+  border-top: var(--rule) solid var(--ink);
+  font-size: 0.95rem;
+}
+
+/* Education & training */
+.education .edu-list {
+  margin: 0;
+  max-width: 40rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.edu-item {
+  padding-bottom: 1.35rem;
+  border-bottom: var(--rule, 1px) solid var(--ink);
+}
+
+.edu-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.edu-item dt {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 0.4rem;
+}
+
+.edu-item dd {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  max-width: 36rem;
+}
+
+.edu-item dd + dd {
+  margin-top: 0.35rem;
+}
+
+
+.interest-role {
+  margin: 0 0 0.85rem;
+  padding: 0;
+  border: 0;
+}
+
+.interest-role legend {
+  padding: 0;
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
