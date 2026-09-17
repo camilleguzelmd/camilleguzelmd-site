@@ -79,7 +79,9 @@ Jaw pain and TMJ too. Holding tension upstairs works a lot like the pelvic floor
 
 A body that moves farther than it should can still be strong. Pain, instability, fatigue, a scan that looks “normal.” We sort what to load, what to protect, and how you live in it.
 
-### Neurorehabilitation
+For patient education, the Ehlers-Danlos Society is a good place to look — for example https://www.ehlers-danlos.com.
+
+### Neurorehabilitation and limb difference
 
 After stroke, brain injury, spinal cord injury, cerebral palsy, or another neurologic change, the work is function. Walking. A usable hand. Speech. A day that fits you.
 
@@ -87,10 +89,11 @@ Amputees and limb difference too, especially when adaptive sport or other comple
 
 ### Procedures
 
-Botulinum toxin injections for spasticity and dystonia — including pelvic floor, jaw, neck, trunk, and limbs — using ultrasound and EMG guidance. Trigger point injections and ultrasound-guided joint and bursa injections (shoulders, knees, hips) are separate; not botulinum toxin.
+Botulinum toxin — for spasticity and dystonia (pelvic floor, jaw, neck, trunk, limbs), ultrasound and EMG guidance.
 
-I use botulinum toxin by name on purpose — brands can include Dysport, Xeomin, Daxxify, and others.
+Trigger point injections — ultrasound- and EMG-guided. Not botulinum toxin.
 
+Intraarticular joint injections — ultrasound-guided; shoulder, knee, hip, among others. Not botulinum toxin.
 
 ### Conditions I often see
 
@@ -106,11 +109,15 @@ A longer list so you can find what you need. If yours is not here, still ask.
 - Spinal cord injury
 - Cerebral palsy care for young adults and beyond
 - Custom wheelchair evaluation and other complex durable medical equipment (DME)
+- Complex orthotic needs
+- Functional electrical stimulation bioprosthetics
 - Amputation and limb difference
 - Adaptive sport and para-athletes, including adaptive fencing
 - Performing arts medicine
 - Spasticity and tone
 - Parkinson’s disease rehabilitation
+- Post-polio syndrome
+- Osteitis pubis
 - Shoulder, knee, hip, and bursa injection care
 
 ### Line
@@ -127,19 +134,17 @@ Phase 2 + personal/sport weave.
 
 Board-certified physical medicine and rehabilitation. Fellow of the American Academy of Physical Medicine and Rehabilitation (FAAPMR).
 
-I care for adults — pelvic floor, hypermobility, and neurorehabilitation. Spasticity and dystonia. Cerebral palsy as people move into adult care and as they age. Stroke, spinal cord injury, brain injury, amputation and limb difference. TMJ, scapular, and pelvic floor when holding tension is the problem. Performing arts medicine is part of how I practice. So is adaptive sport — para-athletes competing at a high level in bodies the world often underestimates.
+I take care of adults — pelvic floor, hypermobility, and neurorehab, including limb difference. Spasticity and dystonia. Cerebral palsy as people move into adult care and as they age. Stroke, spinal cord injury, brain injury. When holding tension is the problem — jaw, scapular, pelvic floor. Performing arts medicine is part of how I practice. So is adaptive sport: para-athletes competing hard in bodies the world often underestimates.
 
-I use ultrasound and EMG guidance for botulinum toxin injections when treating spasticity and dystonia. Separately, I do ultrasound- and EMG-guided trigger point injections and ultrasound-guided joint and bursa injections (shoulders, knees, hips).
+For botulinum toxin, I use ultrasound and EMG guidance when I’m treating spasticity and dystonia. Trigger point injections are separate. So are ultrasound-guided joint injections.
 
 Most recently I was an assistant professor at UCSF, where I built the general physiatry service, grew pelvic floor and hypermobility care, and did diagnostic EMG. Before that I was associate medical director of the acute rehab unit at Dominican Hospital in Santa Cruz.
 
-Duke MD. Duke undergrad in International Comparative Studies and global health (Angier B. Duke Scholar) — and a varsity fencer. Internship at UCSF Fresno. Residency at Shirley Ryan AbilityLab in Chicago — the top PM&R program, at the rehab hospital ranked #1 for 36 years running — including a performing arts medicine rotation with on-call coverage for performers at Ravinia. Hearst Resident Leadership Award. McKinsey MD fellow.
+Duke for MD and undergrad (and varsity fencing). Internship at UCSF Fresno. Residency at Shirley Ryan AbilityLab in Chicago — including performing arts medicine coverage at Ravinia. I love mentoring the next generation of physicians and therapists.
 
-I’ve published and presented on rehab and global health topics, and volunteered in Ecuador, Mexico, Romania, Turkey, Austria, and Haiti. I love mentoring the next generation of physicians and therapists.
+I grew up in South Texas and Spain. English, Spanish, Turkish, or German — I can care for you in any of them.
 
-I grew up in South Texas and Spain. Medical interpreter training in Spanish. English, Spanish, Turkish, or German — I can care for you in any of them.
-
-Outside clinic: husband, two kids, time outdoors together, and a mediocre clarinet habit that keeps me humble.
+Outside clinic: spouse, two kids, time outdoors together, sourdough, and a mediocre clarinet habit that keeps me humble.
 
 This is a new solo practice. It is not a hospital clinic.
 
