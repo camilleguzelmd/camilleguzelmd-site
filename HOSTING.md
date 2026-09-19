@@ -21,3 +21,10 @@ Unpublished. Do not deploy until Camille signs off. After sign-off, CoS owns hos
 
 - `index.html` form uses `preventDefault` and shows “This form is a preview — not collecting yet.”
 - `noindex, nofollow`. Local files under `/workspace/clinic-launch-tracker/site/` only.
+
+## Indexing (live)
+
+- Homepage is `index, follow` (was `noindex` during unpublished preview).
+- `robots.txt` allows crawl and points at `sitemap.xml`.
+- After deploy: verify in Google Search Console and request indexing.
+
