@@ -1365,3 +1365,9 @@ button[type="submit"]:focus-visible {
     background: rgba(66, 31, 44, 0.88);
   }
 }
+
+.cta-note, .contact-note {
+  font-weight: 400;
+  font-size: 0.85em;
+  opacity: 0.85;
+}
