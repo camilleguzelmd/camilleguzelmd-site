@@ -22,7 +22,7 @@ Internal only (Camille, 5 Sep 2026):
 Document title: Camille Guzel, MD — you are capable. (motto secondary; not clinic name)
 Meta description: Physiatrist in Los Altos. Pelvic floor, hypermobility, neurorehabilitation. Direct specialty care — simple, transparent fees shared when we talk. Keep your insurance for labs, imaging, and hospital care. Taking interest now. Call +1 (650) 204-0940.
 
-Public email (site): info@camilleguzelmd.com — future Workspace + HIPAA BAA. Patients may send clinical detail here; bots must not treat this as an ops inbox to scrape for PHI.
+Public email (site): contact@camilleguzelmd.com — future Workspace + HIPAA BAA. Patients may send clinical detail here; bots must not treat this as an ops inbox to scrape for PHI.
 Ops email (hidden from public): Camille.guzel.md@gmail.com — Grok Bot may access; no patient info.
 
 ## HIPAA / waitlist architecture (hard rules)
@@ -60,7 +60,7 @@ Pelvic floor. Hypermobility. Neurorehabilitation.
 Solo practice. Direct specialty care. Fees are simple and transparent — we’ll share them when we talk. Keep your insurance for labs, imaging, and hospital care.
 
 Call +1 (650) 204-0940
-Email info@camilleguzelmd.com
+Email contact@camilleguzelmd.com
 
 Interim headshot in hero + About (square 3×, temporary until professional photos). Nav brand still CG.
 Public timing: date-light — no Dec 1 / Winter / Feb–Mar on page.
@@ -221,7 +221,7 @@ On submit (no network): This form is a preview — not collecting yet.
 ## Contact / Footer
 
 +1 (650) 204-0940
-info@camilleguzelmd.com
+contact@camilleguzelmd.com
 www.camilleguzelmd.com
 
 Peninsula / Los Altos.
