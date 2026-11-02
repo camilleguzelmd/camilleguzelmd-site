@@ -1483,3 +1483,12 @@ button[type="submit"]:focus-visible {
     scroll-padding-top: 8rem;
   }
 }
+
+/* Responsive images: keep <img> as the layout box inside <picture> */
+picture {
+  display: contents;
+}
+
+picture > source {
+  display: none;
+}
